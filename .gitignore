@@ -8,6 +8,10 @@ target/
 *.tar
 *.tar.gz
 #.flattened-pom.xml
+/.mvn/wrapper/maven-wrapper.jar
+/.mvn/
+/mvnw
+/mvnw.cmd
 
 # eclipse ignore
 .settings/
