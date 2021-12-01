@@ -1,4 +1,4 @@
-package com.leon.helloswagger.config;
+package com.leon.hello.swagger.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @CREATED_DATE: 2021/5/28 15:46
  * @Version 1.0
  * @DESCRIPTION: Swagger 配置类
+ * 访问地址 http://localhost:8080/swagger-ui.html
  **/
 @Configuration
 @EnableSwagger2
@@ -27,7 +28,7 @@ public class SwaggerConfig {
 //                .groupName("分布式任务系统") // 如果配置多个文档的时候，那么需要配置groupName来分组标识
                 .apiInfo(apiInfo()) // 用于生成API信息
                 .select() // select()函数返回一个ApiSelectorBuilder实例,用来控制接口被swagger做成文档
-                .apis(RequestHandlerSelectors.basePackage("com.leon.helloswagger.controller")) // 用于指定扫描哪个包下的接口
+                .apis(RequestHandlerSelectors.basePackage("com.leon.hello.swagger.controller")) // 用于指定扫描哪个包下的接口
                 .paths(PathSelectors.any())// 选择所有的API,如果你想只为部分API生成文档，可以配置这里
                 .build();
     }
